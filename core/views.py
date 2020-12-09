@@ -17,6 +17,16 @@ def products(request):
     return render(request, "product-page.html", context)
 
 
+def product_detail(request,id,slug):
+    category = Category.objects.all()
+    products = Product.objects.get(pk=id)
+    images = Images.objects.filter(product.id=id)
+
+    context = {'product': products,
+               'category': category,
+               }
+    return render(request,'product_detail.html',context)
+
 class HomeView(ListView):
     model = Item
     template_name = 'home-page.html'
