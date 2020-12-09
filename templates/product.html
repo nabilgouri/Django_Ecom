@@ -127,10 +127,18 @@
             </div>
 
             <p class="lead">
+
+              {% if item.discount_price %}
               <span class="mr-1">
-                <del>$200</del>
+                <del>${{ object.price }}</del>
               </span>
-              <span>${{ object.price }}</span>
+
+              <span> {{ object.discount_price }} </span>
+
+              {% else %}
+              <span> {{ object.price }} </span>
+              {% endif %}
+
             </p>
 
             <p class="lead font-weight-bold">{{object.title}}</p>
