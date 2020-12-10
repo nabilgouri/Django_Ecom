@@ -143,9 +143,7 @@
 
             <p class="lead font-weight-bold">{{object.title}}</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolor suscipit libero eos atque quia ipsa
-              sint voluptatibus!
-              Beatae sit assumenda asperiores iure at maxime atque repellendus maiores quia sapiente.</p>
+            <p>{{ object.description }}</p>
 
             <form class="d-flex justify-content-left">
               <!-- Default input -->
@@ -155,6 +153,9 @@
               </button>
 
             </form>
+            <a href="{{ object.get_add_to_cart }}" class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
+              <i class="fas fa-shopping-cart ml-1"></i>
+            </a>
 
           </div>
           <!--Content-->
