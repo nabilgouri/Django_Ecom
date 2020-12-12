@@ -42,6 +42,11 @@ class Item(models.Model):
             'slug': self.slug
         })
 
+    def get_remove_from_cart(self):
+        return reverse("core:remove-from-cart", kwargs={
+            'slug': self.slug
+        })
+
 
 class OrderItem(models.Model):
 
