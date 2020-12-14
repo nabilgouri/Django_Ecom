@@ -21,7 +21,9 @@ def products(request):
 
 class HomeView(ListView):
     model = Item
+
     template_name = 'home-page.html'
+    paginate_by = 12
 
 
 class ItemDetailView(DetailView):
